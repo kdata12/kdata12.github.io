@@ -14,8 +14,13 @@
 </head>
 
 <body>
-  <nav>
-    <!------------------------ NavBar ------------------------>
+  <!------------------------ NavBar ------------------------>
+  <nav class="hidden">
+    <button id="hamburger-button">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </button>
     <ul>
       <li>
         <h1>
@@ -43,6 +48,7 @@
       </li>
     </ul>
   </nav>
+
 
   <!------------------------ Intro section / Hero ------------------------>
 
@@ -120,7 +126,22 @@
       <p>
         I'm always interested in hearing about new opportunities in Software Engineering.
       </p>
-      <p><a href="mailto:pvong@asu.edu" class="button">Email me</a></p>
+      <!-- <p><button class="button">Contact Me</button></p> -->
+      <form action="https://formspree.io/f/mgejdgbn" method="POST">
+        <label>
+          <div>
+            <p> Your email:</p>
+          </div>
+          <input type="email" name="email">
+        </label>
+        <label>
+          <div>
+            <p> Your message: </p>
+          </div>
+          <textarea name="message"></textarea>
+        </label>
+        <button type="submit">Send</button>
+      </form>
     </section>
   </div>
   <div class="gradient"></div>
@@ -150,6 +171,7 @@
     </ul>
     <p><small>&copy; 2023 Phuc Vong. All rights reserved.</small></p>
   </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>
